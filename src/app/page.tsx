@@ -69,7 +69,7 @@ export default function Home() {
           <div className={"navlinks " + (menu ? "open" : "")}>
             <a href="#about">About</a>
             <a href="#impact">Membership</a>
-            <a href="#sectors">Collaboration</a>
+            <a href="/sectors">Collaboration</a>
             <a href="#publications">Publications</a>
             <a href="/events">Events</a>
             <a href="#media">Media</a>
@@ -367,7 +367,7 @@ export default function Home() {
           </div>
           <div>
             <h3>Resource Links</h3>
-            <a href="#sectors">Sector Committees</a>
+            <a href="/sectors">Sector Committees</a>
             <a href="#impact">Membership</a>
             <a href="#media">Media</a>
             <a href="/contact">Contact Us</a>
