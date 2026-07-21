@@ -68,9 +68,9 @@ export default function Home() {
           </a>
           <div className={"navlinks " + (menu ? "open" : "")}>
             <a href="#about">About</a>
-            <a href="#impact">Membership</a>
+            <a href="/membership">Membership</a>
             <a href="/sectors">Collaboration</a>
-            <a href="#publications">Publications</a>
+            <a href="/position-papers">Publications</a>
             <a href="/events">Events</a>
             <a href="#media">Media</a>
           </div>
@@ -293,11 +293,7 @@ export default function Home() {
             Find new review initiatives in impactful reports, and subscribe to
             newsletter experiences.
           </p>
-          <a
-            className="button outline"
-            href="https://www.ebgindia.org/position-papers"
-            target="_blank"
-          >
+          <a className="button outline" href="/position-papers" target="_blank">
             Download Now
           </a>
         </div>
@@ -334,12 +330,12 @@ export default function Home() {
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="/events">Events</a>
-            <a href="#publications">Publications</a>
+            <a href="/position-papers">Publications</a>
           </div>
           <div>
             <h3>Resource Links</h3>
             <a href="/sectors">Sector Committees</a>
-            <a href="#impact">Membership</a>
+            <a href="/membership">Membership</a>
             <a href="#media">Media</a>
             <a href="/contact">Contact Us</a>
           </div>
