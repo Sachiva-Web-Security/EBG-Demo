@@ -16,7 +16,7 @@ export default function EventsPage(){
  return <main className={styles.page}>
   <header className={styles.header}>
    <Link className={styles.brand} href="/"><img src="/assets/EBG%20Logo%20-%20March%202026_edited.avif" alt="EBG Federation"/></Link>
-   <nav><Link href="/#about">About</Link><Link href="/#impact">Membership</Link><Link href="/#sectors">Sectors</Link><Link href="/events">Events</Link><Link href="/#publications">Position Papers</Link><Link href="/#contact">Contact</Link></nav>
+   <nav><Link href="/#about">About</Link><Link href="/#impact">Membership</Link><Link href="/#sectors">Sectors</Link><Link href="/events">Events</Link><Link href="/#publications">Position Papers</Link><Link href="/contact">Contact</Link></nav>
    <Link className={styles.join} href="/#impact">Become a Member <span>→</span></Link>
   </header>
 
@@ -46,3 +46,4 @@ export default function EventsPage(){
   </footer>
  </main>
 }
+
