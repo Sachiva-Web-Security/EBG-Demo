@@ -125,7 +125,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="stats">
+        {/* <div className="stats">
           <div>
             <strong>25+</strong>
             <span>Years</span>
@@ -138,7 +138,7 @@ export default function Home() {
             <strong>400+</strong>
             <span>Members</span>
           </div>
-        </div>
+        </div> */}
         <a className="scroll" href="#impact">
           Scroll to explore ↓
         </a>
