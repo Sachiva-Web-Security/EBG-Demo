@@ -529,3 +529,17 @@
     gap: 10px;
   }
 }
+
+.cardTop i svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.5;
+  color: var(--gold);
+}
+.cards article:hover .cardTop i {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+.cards article:hover .cardTop i svg {
+  color: #fff;
+}

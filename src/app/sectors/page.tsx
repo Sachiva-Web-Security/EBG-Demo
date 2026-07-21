@@ -1,74 +1,128 @@
 ﻿import Link from "next/link";
+import {
+  Sprout,
+  Wine,
+  Car,
+  Plane,
+  Landmark,
+  HandHeart,
+  FlaskConical,
+  Shield,
+  Cpu,
+  ShoppingBasket,
+  ChartLine,
+  HeartPulse,
+  Fuel,
+  Pill,
+  Zap,
+  TrainFront,
+  ShoppingBag,
+} from "lucide-react";
 import styles from "./sectors.module.css";
 
 const sectors = [
-  [
-    "01",
-    "AG",
-    "Agriculture & Agrochemicals",
-    "Food security, crop science and sustainable agricultural policy.",
-  ],
-  [
-    "02",
-    "AB",
-    "Alcoholic Beverages",
-    "Responsible growth, regulation and market access.",
-  ],
-  [
-    "03",
-    "AU",
-    "Automotive",
-    "Mobility, manufacturing and the road to electrification.",
-  ],
-  [
-    "04",
-    "AV",
-    "Aviation",
-    "Connecting markets through safer, smarter aviation.",
-  ],
-  ["05", "BK", "Banking", "Financial resilience and cross-border capital."],
-  [
-    "06",
-    "CS",
-    "CSR & Sustainability",
-    "Purpose-led enterprise and measurable impact.",
-  ],
-  [
-    "07",
-    "CP",
-    "Chemicals & Petrochemicals",
-    "Innovation, safety and competitive manufacturing.",
-  ],
-  ["08", "DF", "Defence", "Strategic collaboration and advanced capability."],
-  [
-    "09",
-    "DX",
-    "Digital Transformation",
-    "Technology policy for an intelligent economy.",
-  ],
-  ["10", "FM", "FMCG", "Consumer growth, standards and responsible markets."],
-  [
-    "11",
-    "FS",
-    "Financial Services",
-    "Deepening access, trust and financial inclusion.",
-  ],
-  [
-    "12",
-    "MH",
-    "Medical Devices & Healthcare",
-    "Better systems and accessible patient outcomes.",
-  ],
-  ["13", "OG", "Oil & Gas", "Energy security through a balanced transition."],
-  [
-    "14",
-    "PH",
-    "Pharmaceuticals",
-    "Research, quality and global healthcare access.",
-  ],
-  ["15", "PW", "Power", "Reliable infrastructure for a low-carbon future."],
-  ["16", "RW", "Railway", "Modern mobility and connected infrastructure."],
-  ["17", "RT", "Retail", "Consumer confidence and the future of commerce."],
+  {
+    number: "01",
+    Icon: Sprout,
+    title: "Agriculture & Agrochemicals",
+    copy: "Food security, crop science and sustainable agricultural policy.",
+  },
+  {
+    number: "02",
+    Icon: Wine,
+    title: "Alcoholic Beverages",
+    copy: "Responsible growth, regulation and market access.",
+  },
+  {
+    number: "03",
+    Icon: Car,
+    title: "Automotive",
+    copy: "Mobility, manufacturing and the road to electrification.",
+  },
+  {
+    number: "04",
+    Icon: Plane,
+    title: "Aviation",
+    copy: "Connecting markets through safer, smarter aviation.",
+  },
+  {
+    number: "05",
+    Icon: Landmark,
+    title: "Banking",
+    copy: "Financial resilience and cross-border capital.",
+  },
+  {
+    number: "06",
+    Icon: HandHeart,
+    title: "CSR & Sustainability",
+    copy: "Purpose-led enterprise and measurable impact.",
+  },
+  {
+    number: "07",
+    Icon: FlaskConical,
+    title: "Chemicals & Petrochemicals",
+    copy: "Innovation, safety and competitive manufacturing.",
+  },
+  {
+    number: "08",
+    Icon: Shield,
+    title: "Defence",
+    copy: "Strategic collaboration and advanced capability.",
+  },
+  {
+    number: "09",
+    Icon: Cpu,
+    title: "Digital Transformation",
+    copy: "Technology policy for an intelligent economy.",
+  },
+  {
+    number: "10",
+    Icon: ShoppingBasket,
+    title: "FMCG",
+    copy: "Consumer growth, standards and responsible markets.",
+  },
+  {
+    number: "11",
+    Icon: ChartLine,
+    title: "Financial Services",
+    copy: "Deepening access, trust and financial inclusion.",
+  },
+  {
+    number: "12",
+    Icon: HeartPulse,
+    title: "Medical Devices & Healthcare",
+    copy: "Better systems and accessible patient outcomes.",
+  },
+  {
+    number: "13",
+    Icon: Fuel,
+    title: "Oil & Gas",
+    copy: "Energy security through a balanced transition.",
+  },
+  {
+    number: "14",
+    Icon: Pill,
+    title: "Pharmaceuticals",
+    copy: "Research, quality and global healthcare access.",
+  },
+  {
+    number: "15",
+    Icon: Zap,
+    title: "Power",
+    copy: "Reliable infrastructure for a low-carbon future.",
+  },
+  {
+    number: "16",
+    Icon: TrainFront,
+    title: "Railway",
+    copy: "Modern mobility and connected infrastructure.",
+  },
+  {
+    number: "17",
+    Icon: ShoppingBag,
+    title: "Retail",
+    copy: "Consumer confidence and the future of commerce.",
+  },
 ];
 
 export default function SectorsPage() {
@@ -164,11 +218,13 @@ export default function SectorsPage() {
           </p>
         </div>
         <div className={styles.cards}>
-          {sectors.map(([number, mark, title, copy]) => (
+          {sectors.map(({ number, Icon, title, copy }) => (
             <article key={title}>
               <div className={styles.cardTop}>
                 <span>{number}</span>
-                <i>{mark}</i>
+                <i>
+                  <Icon aria-hidden="true" />
+                </i>
               </div>
               <h3>{title}</h3>
               <p>{copy}</p>
