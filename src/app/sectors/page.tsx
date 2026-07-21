@@ -137,7 +137,7 @@ export default function SectorsPage() {
         </Link>
         <nav>
           <Link href="/#about">About</Link>
-          <Link href="/#impact">Membership</Link>
+          <Link href="/membership">Membership</Link>
           <Link className={styles.active} href="/sectors">
             Sectors
           </Link>
@@ -301,3 +301,4 @@ export default function SectorsPage() {
     </main>
   );
 }
+
