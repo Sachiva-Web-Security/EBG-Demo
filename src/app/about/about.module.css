@@ -6,20 +6,25 @@
   background: var(--paper);
   min-height: 100vh;
 }
+
 .header {
   height: 82px;
-  max-width: 1060px;
-  margin: auto;
+  
   display: flex;
   align-items: center;
   gap: 54px;
-  position: relative;
-  z-index: 5;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   padding: 0 24px;
+  background: #fff;
+  border-bottom: 1px solid #ddd8cf;
+
 }
 .brand img {
-  width: 145px;
-  height: 48px;
+  width: 130px;
+  height: auto;
+  margin-left: 40;
   object-fit: contain;
 }
 .header nav {
@@ -418,20 +423,22 @@
     sans-serif;
 }
 .footer {
-  height: 105px;
+  height: auto;
+  min-height: 105px;
   border-top: 1px solid #ddd8cf;
   width: min(1060px, calc(100% - 48px));
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+  padding: 30px 0;
 }
 .footer img {
-  width: 130px;
+  width: 160px;
 }
 .footer p {
   font:
-    8px Arial,
+    11px Arial,
     sans-serif;
   color: #999;
   text-align: center;
@@ -443,7 +450,7 @@
 }
 .footer div a {
   font:
-    8px Arial,
+    11px Arial,
     sans-serif;
   color: #777;
 }
@@ -489,9 +496,13 @@
   }
   .footer {
     grid-template-columns: 1fr 1fr;
+    background-color: #fff !important;
   }
   .footer p {
     display: none;
+  }
+  .brand img {
+    width: 140px;
   }
 }
 @media (max-width: 520px) {
@@ -499,7 +510,7 @@
     height: 68px;
   }
   .brand img {
-    width: 105px;
+    width: 120px;
   }
   .join {
     font-size: 8px;
@@ -571,8 +582,10 @@
   }
   .footer {
     width: calc(100% - 32px);
+    background-color: white;
   }
   .footer div {
     gap: 10px;
   }
+  
 }

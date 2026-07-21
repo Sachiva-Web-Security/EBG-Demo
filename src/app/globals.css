@@ -17,7 +17,8 @@ body {
     margin: 0;
     color: var(--ink);
     background: #fff;
-    font-family: Arial, Helvetica, sans-serif
+    /* font-family: Arial, Helvetica, sans-serif */
+    font-family: "Times in Roman", Georgia, serif;
 }
 
 a {
@@ -42,7 +43,7 @@ input {
 .kicker {
     color: #8c8f94;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: .15em;
     margin: 0 0 20px
 }
@@ -62,7 +63,7 @@ h2 {
     padding: 0 22px;
     align-items: center;
     justify-content: center;
-    font-size: 11px;
+    font-size: 13px;
     transition: .25s
 }
 
@@ -124,7 +125,7 @@ h2 {
 .navlinks {
     display: flex;
     gap: 34px;
-    font-size: 11px
+    font-size: 13px
 }
 
 .navlinks a {
@@ -204,7 +205,7 @@ h2 {
 }
 
 .eyebrow {
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: .18em;
     text-transform: uppercase
 }
@@ -221,7 +222,7 @@ h2 {
 
 .hero-copy>p:not(.eyebrow) {
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.55;
     letter-spacing: .08em
 }
@@ -288,7 +289,7 @@ h2 {
 .impact>div:first-child>p:last-child,
 .section-side>p {
     color: #585c60;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.6
 }
 
@@ -363,7 +364,7 @@ h2 {
 }
 
 .vision-copy>p:not(.kicker) {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.65;
     max-width: 590px
 }
@@ -460,7 +461,7 @@ h2 {
 }
 
 .location {
-    font-size: 10px;
+    font-size: 11px;
     border-left: 1px solid #bbb;
     padding-left: 20px
 }
@@ -491,14 +492,14 @@ h2 {
     background: #fff;
     padding: 14px 16px;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     transition: .2s
 }
 
 .sector-tabs button small,
 .sector-tabs button span {
     display: block;
-    font-size: 8px;
+    font-size: 10px;
     color: #999;
     margin-bottom: 10px
 }
@@ -572,7 +573,7 @@ h2 {
 
 .media-grid small,
 .event-cards small {
-    font-size: 9px;
+    font-size: 11px;
     color: #9a7b45;
     display: block;
     margin: 13px 0 8px;
@@ -582,7 +583,7 @@ h2 {
 .media-grid h3,
 .event-cards h3 {
     font-family: Georgia, serif;
-    font-size: 16px;
+    font-size: 18px;
     margin: 0 0 15px;
     font-weight: 400;
     line-height: 1.2
@@ -590,7 +591,7 @@ h2 {
 
 .media-grid a,
 .event-cards a {
-    font-size: 9px;
+    font-size: 11px;
     text-transform: uppercase;
     border-bottom: 1px solid #333;
     padding-bottom: 3px
@@ -622,7 +623,7 @@ h2 {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 9px;
+    font-size: 11px;
     text-transform: uppercase
 }
 
@@ -650,7 +651,7 @@ h2 {
 }
 
 .event-cards p {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.45;
     color: #555;
     min-height: 42px
@@ -725,12 +726,12 @@ h2 {
 }
 
 .magazines h3 {
-    font-size: 12px;
+    font-size: 14px;
     margin: 14px 0 5px
 }
 
 .magazines p {
-    font-size: 9px;
+    font-size: 11px;
     color: #888;
     margin: 0
 }
@@ -758,20 +759,20 @@ footer {
 }
 
 .footer-grid h3 {
-    font-size: 11px;
+    font-size: 13px;
     text-transform: uppercase;
     margin: 0 0 18px
 }
 
 .footer-grid>div>a {
     display: block;
-    font-size: 10px;
+    font-size: 12px;
     margin: 9px 0;
     color: #56595c
 }
 
 .newsletter p {
-    font-size: 10px;
+    font-size: 12px;
     color: #666
 }
 
@@ -785,7 +786,7 @@ footer {
     background: #fff;
     padding: 12px;
     width: 100%;
-    font-size: 10px
+    font-size: 12px
 }
 
 .newsletter button {
@@ -793,7 +794,7 @@ footer {
     background: var(--gold);
     color: #fff;
     padding: 0 18px;
-    font-size: 10px
+    font-size: 12px
 }
 
 .footer-bottom {
@@ -803,7 +804,7 @@ footer {
     border-top: 1px solid #bbb;
     display: flex;
     justify-content: space-between;
-    font-size: 9px;
+    font-size: 11px;
     color: #777
 }
 
@@ -1208,9 +1209,9 @@ footer .logo {
 }
 
 .nav .logo {
-    height: 74px;
-    min-width: 112px;
-    padding: 5px 12px;
+    height: 90px;
+    min-width: 140px;
+    padding: 8px 14px;
     background: #fff;
     border-radius: 2px;
     justify-content: center;
@@ -1220,7 +1221,7 @@ footer .logo {
 .nav .logo img {
     width: auto;
     height: auto;
-    max-height: 70px;
+    max-height: 82px;
     object-fit: cover;
 
 }
@@ -1302,13 +1303,13 @@ footer .logo {
     }
 
     .nav .logo {
-        height: 46px;
-        min-width: 94px;
+        height: 56px;
+        min-width: 110px;
         padding: 4px 9px
     }
 
     .nav .logo img {
-        width: 78px
+        width: 96px
     }
 
     .nav-cta {
@@ -1349,12 +1350,12 @@ footer .logo {
     }
 
     .nav .logo {
-        height: 42px;
-        min-width: 86px
+        height: 50px;
+        min-width: 100px
     }
 
     .nav .logo img {
-        width: 72px
+        width: 84px
     }
 
     .nav-cta {
@@ -1417,7 +1418,7 @@ footer .logo {
 
 .nav-cta {
     border-radius: 5px;
-    background: #b6914f;
+    background: #222249;
     box-shadow: 0 5px 14px rgba(126, 94, 39, .2)
 }
 

@@ -5,7 +5,9 @@ import styles from "./about.module.css";
 export default function AboutPage() {
   return (
     <main className={styles.page}>
+      
       <header className={styles.header}>
+        
         <Link className={styles.brand} href="/">
           <img
             src="/assets/EBG%20Logo%20-%20March%202026_edited.avif"
