@@ -13,42 +13,42 @@ import {
 import styles from "./membership.module.css";
 
 const members = [
-  "BARCO",
-  "BBVA",
-  "Barclays",
-  "Carlsberg",
-  "Citi",
-  "Commerzbank",
-  "DBS",
-  "Deloitte.",
-  "Deoleo",
-  "Deutsche Bank",
-  "EY",
-  "FLIR",
-  "Mazars",
-  "Fronius",
-  "G4S",
-  "GEMINI",
-  "Getzner",
-  "Gulf",
-  "HSBC",
-  "ICICI Bank",
-  "IDH",
-  "KFW",
-  "Knight Frank",
-  "LANXESS",
-  "Medtronic",
-  "Pernod Ricard",
-  "Red Bull",
-  "RÖDL",
-  "Rolls-Royce",
-  "Rosenberger",
-  "SAAB",
-  "Samson",
-  "Standard Chartered",
-  "TMF Group",
-  "UNI Abex",
-  "WEYTEC",
+  ["BARCO", "barco.com"],
+  ["BBVA", "bbva.com"],
+  ["Barclays", "barclays.com"],
+  ["Carlsberg", "carlsberg.com"],
+  ["Citi", "citi.com"],
+  ["Commerzbank", "commerzbank.com"],
+  ["DBS", "dbs.com"],
+  ["Deloitte", "deloitte.com"],
+  ["Deoleo", "deoleo.com"],
+  ["Deutsche Bank", "db.com"],
+  ["EY", "ey.com"],
+  ["FLIR", "flir.com"],
+  ["Forvis Mazars", "forvismazars.com"],
+  ["Fronius", "fronius.com"],
+  ["G4S", "g4s.com"],
+  ["Gemini", "gemini.com"],
+  ["Getzner", "getzner.com"],
+  ["Gulf", "gulf.com"],
+  ["HSBC", "hsbc.com"],
+  ["ICICI Bank", "icicibank.com"],
+  ["IDH", "idh.org"],
+  ["KfW", "kfw.de"],
+  ["Knight Frank", "knightfrank.com"],
+  ["LANXESS", "lanxess.com"],
+  ["Medtronic", "medtronic.com"],
+  ["Pernod Ricard", "pernod-ricard.com"],
+  ["Red Bull", "redbull.com"],
+  ["RÖDL", "roedl.com"],
+  ["Rolls-Royce", "rolls-royce.com"],
+  ["Rosenberger", "rosenberger.com"],
+  ["SAAB", "saab.com"],
+  ["Samson", "samsongroup.com"],
+  ["Standard Chartered", "sc.com"],
+  ["TMF Group", "tmf-group.com"],
+  ["UNI Abex", "uniabex.com"],
+  ["WEYTEC", "weytec.com"],
 ];
 
 const benefits = [
@@ -218,9 +218,14 @@ export default function MembershipPage() {
           </p>
         </div>
         <div className={styles.logos}>
-          {members.map((member, i) => (
+          {members.map(([member, domain], i) => (
             <div key={member} className={i % 7 === 0 ? styles.accent : ""}>
               <span>{member}</span>
+              <img
+                src={"https://logo.clearbit.com/" + domain + "?size=240"}
+                alt={member + " logo"}
+                loading="lazy"
+              />
             </div>
           ))}
         </div>
@@ -406,4 +411,3 @@ export default function MembershipPage() {
     </main>
   );
 }
-
