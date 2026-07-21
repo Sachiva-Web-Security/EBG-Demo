@@ -143,36 +143,7 @@ export default function Home() {
           Scroll to explore ↓
         </a>
       </section>
-      <section className="impact wrap section" id="impact">
-        <div>
-          <p className="kicker">Building stronger business bridges</p>
-          <h2>
-            Business
-            <br />
-            Impact
-          </h2>
-          <p>
-            Actionable business impact by advocating
-            <br />
-            initiatives and counter narratives.
-          </p>
-        </div>
-        <div className="impact-art">
-          <span className="wire" />
-          <span className="gold-shape" />
-          <i>◇</i>
-        </div>
-        <div className="impact-numbers">
-          <p>
-            <strong>150+</strong>
-            <span>Country Affiliations</span>
-          </p>
-          <p>
-            <strong>100+</strong>
-            <span>Country Associations</span>
-          </p>
-        </div>
-      </section>
+    
       <section className="vision section" id="about">
         <div className="wrap vision-inner">
           <div className="vision-copy">
@@ -195,7 +166,7 @@ export default function Home() {
           <div className="chairman">
             <div className="gold-orbit" />
             <img
-              src="https://www.prabhusouharda.com/wp-content/uploads/2023/08/president.png"
+              src="/assets/chairman.jpg"
               alt="EBG chairman"
             />
           </div>
