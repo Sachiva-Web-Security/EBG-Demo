@@ -92,7 +92,7 @@ export default function MembershipPage() {
           </Link>
           <Link href="/sectors">Sectors</Link>
           <Link href="/events">Events</Link>
-          <Link href="/#publications">Position Papers</Link>
+          <Link href="/position-papers">Position Papers</Link>
           <Link href="/contact">Contact</Link>
         </nav>
         <Link className={styles.join} href="#apply">
@@ -406,3 +406,4 @@ export default function MembershipPage() {
     </main>
   );
 }
+

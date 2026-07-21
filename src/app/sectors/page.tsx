@@ -142,7 +142,7 @@ export default function SectorsPage() {
             Sectors
           </Link>
           <Link href="/events">Events</Link>
-          <Link href="/#publications">Position Papers</Link>
+          <Link href="/position-papers">Position Papers</Link>
           <Link href="/contact">Contact</Link>
         </nav>
         <Link className={styles.join} href="/#impact">
@@ -294,11 +294,12 @@ export default function SectorsPage() {
         <p>© 2026 EBG Federation. All rights reserved.</p>
         <div>
           <Link href="/events">Events</Link>
-          <Link href="/#publications">Position Papers</Link>
+          <Link href="/position-papers">Position Papers</Link>
           <Link href="/contact">Contact</Link>
         </div>
       </footer>
     </main>
   );
 }
+
 
