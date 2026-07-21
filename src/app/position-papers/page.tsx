@@ -82,7 +82,7 @@ export default function PositionPapersPage() {
           />
         </Link>
         <nav>
-          <Link href="/#about">About</Link>
+          <Link href="/about">About</Link>
           <Link href="/membership">Membership</Link>
           <Link href="/sectors">Sectors</Link>
           <Link href="/events">Events</Link>
@@ -343,3 +343,4 @@ export default function PositionPapersPage() {
     </main>
   );
 }
+

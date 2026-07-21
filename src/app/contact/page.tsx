@@ -6,7 +6,7 @@ import styles from "./contact.module.css";
 export default function ContactPage(){
  const [sent,setSent]=useState(false);
  return <main className={styles.page}>
-  <header className={styles.header}><Link className={styles.brand} href="/"><img src="/assets/EBG%20Logo%20-%20March%202026_edited.avif" alt="EBG Federation"/></Link><nav><Link href="/#about">About</Link><Link href="/membership">Membership</Link><Link href="/sectors">Sectors</Link><Link href="/events">Events</Link><Link href="/position-papers">Position Papers</Link><Link className={styles.active} href="/contact">Contact</Link></nav><Link className={styles.join} href="/membership">Become a Member <span>→</span></Link></header>
+  <header className={styles.header}><Link className={styles.brand} href="/"><img src="/assets/EBG%20Logo%20-%20March%202026_edited.avif" alt="EBG Federation"/></Link><nav><Link href="/about">About</Link><Link href="/membership">Membership</Link><Link href="/sectors">Sectors</Link><Link href="/events">Events</Link><Link href="/position-papers">Position Papers</Link><Link className={styles.active} href="/contact">Contact</Link></nav><Link className={styles.join} href="/membership">Become a Member <span>→</span></Link></header>
   <section className={styles.hero}><div className={styles.grid}/><div className={styles.heroInner}><p className={styles.overline}><span/> Contact · 06</p><h1>Let&apos;s begin a<br/><em>consequential</em><br/>conversation.</h1><p>Whether you are exploring membership, policy collaboration, or a strategic partnership,<br/>the right conversation starts here.</p></div></section>
 
   <section className={styles.contact}>
@@ -21,6 +21,7 @@ export default function ContactPage(){
   <footer className={styles.footer}><Link href="/"><img src="/assets/EBG%20Logo%20-%20March%202026_edited.avif" alt="EBG Federation"/></Link><p>© 2026 EBG Federation. All rights reserved.</p><div><Link href="/events">Events</Link><Link href="/position-papers">Position Papers</Link><Link href="/contact">Contact</Link></div></footer>
  </main>
 }
+
 
 
 

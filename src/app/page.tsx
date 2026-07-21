@@ -67,7 +67,7 @@ export default function Home() {
             />
           </a>
           <div className={"navlinks " + (menu ? "open" : "")}>
-            <a href="#about">About</a>
+            <a href="/about">About</a>
             <a href="/membership">Membership</a>
             <a href="/sectors">Collaboration</a>
             <a href="/position-papers">Publications</a>
@@ -142,35 +142,6 @@ export default function Home() {
         <a className="scroll" href="#impact">
           Scroll to explore ↓
         </a>
-      </section>
-    
-      <section className="vision section" id="about">
-        <div className="wrap vision-inner">
-          <div className="vision-copy">
-            <p className="kicker">Proud. Stable. Enduring.</p>
-            <h2>Chairman&apos;s Vision</h2>
-            <p>
-              European Business Sector Federation, recognised for building
-              bridges, convening decision makers and supporting compelling
-              initiatives, becomes an essential partner in strengthening
-              India–Europe relations.
-            </p>
-            <a
-              className="button outline"
-              href="https://www.ebgindia.org/about-us"
-              target="_blank"
-            >
-              Learn more
-            </a>
-          </div>
-          <div className="chairman">
-            <div className="gold-orbit" />
-            <img
-              src="/assets/chairman.jpg"
-              alt="EBG chairman"
-            />
-          </div>
-        </div>
       </section>
       <section className="sectors section" id="sectors">
         <div className="wrap sector-top">
@@ -328,7 +299,7 @@ export default function Home() {
           <div>
             <h3>Quick Links</h3>
             <a href="#home">Home</a>
-            <a href="#about">About</a>
+            <a href="/about">About</a>
             <a href="/events">Events</a>
             <a href="/position-papers">Publications</a>
           </div>

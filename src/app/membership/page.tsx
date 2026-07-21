@@ -129,7 +129,7 @@ export default function MembershipPage() {
           />
         </Link>
         <nav>
-          <Link href="/#about">About</Link>
+          <Link href="/about">About</Link>
           <Link className={styles.active} href="/membership">
             Membership
           </Link>
@@ -454,3 +454,4 @@ export default function MembershipPage() {
     </main>
   );
 }
+
