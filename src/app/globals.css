@@ -22,3 +22,29 @@ footer{background:#e7e8e9;position:relative;padding:75px 0 20px;overflow:hidden}
 footer .logo{background:transparent}
 @media(max-width:900px){.nav{width:calc(100% - 34px);top:8px}.navlinks{top:58px;left:0;right:0;color:#fff}.hero-copy{width:calc(100% - 34px)}}
 @media(max-width:560px){.nav{height:52px}.nav .logo img{height:28px}.navlinks{top:52px}.hero-copy{padding:30px 14px 26px}.hero h1{font-size:30px}.section{padding-block:52px}}
+
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;background:#121a20}
+@media(prefers-reduced-motion:reduce){.hero-video{animation:none}}
+
+/* Navbar redesign */
+.nav{top:18px;height:72px;width:min(1210px,calc(100% - 48px));padding:0 12px 0 16px;background:rgba(11,23,31,.9);color:#fff;border:1px solid rgba(255,255,255,.16);border-bottom:2px solid #b6914f;box-shadow:0 14px 36px rgba(0,0,0,.22);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.nav .logo{height:54px;min-width:112px;padding:5px 12px;background:#fff;border-radius:2px;justify-content:center;box-shadow:inset 0 0 0 1px #e7e2d7}
+.nav .logo img{width:94px;height:auto;max-height:46px;object-fit:contain}
+.navlinks{height:100%;align-items:center;gap:30px;margin-left:auto;margin-right:30px}
+.navlinks a{height:100%;display:flex;align-items:center;position:relative;font-size:10px;letter-spacing:.055em;text-transform:uppercase;color:#e9ecee;opacity:.78;transition:.25s}
+.navlinks a:after{content:"";position:absolute;left:50%;right:50%;bottom:0;height:2px;background:#c8a460;transition:.25s}
+.navlinks a:hover{color:#fff;opacity:1}.navlinks a:hover:after{left:0;right:0}
+.nav-cta{height:44px;display:inline-flex;align-items:center;gap:16px;padding:0 18px;background:#b6914f;color:#fff;text-transform:uppercase;font-size:9px;letter-spacing:.08em;white-space:nowrap;transition:.25s}
+.nav-cta span{font-size:15px;line-height:1}.nav-cta:hover{background:#c3a260;transform:translateY(-1px)}
+@media(max-width:900px){.nav{top:10px;height:62px;width:calc(100% - 28px);padding:0 10px}.nav .logo{height:46px;min-width:94px;padding:4px 9px}.nav .logo img{width:78px}.nav-cta{margin-left:auto;margin-right:10px;height:38px;padding-inline:13px}.navlinks{top:62px;background:rgba(11,23,31,.97);border-top:1px solid #b6914f;padding:20px;margin:0;height:auto;gap:8px}.navlinks a{height:auto;padding:10px 4px}.menu{width:38px;height:38px;border:1px solid #ffffff42;display:grid;place-items:center;padding:0}}
+@media(max-width:560px){.nav{height:58px}.nav .logo{height:42px;min-width:86px}.nav .logo img{width:72px}.nav-cta{font-size:0;width:40px;padding:0;justify-content:center}.nav-cta span{font-size:18px}.navlinks{top:58px}}
+
+/* Navbar color and edge correction */
+.nav{background:rgba(246,246,243,.94);color:#171a1c;border:1px solid rgba(255,255,255,.86);border-bottom:1px solid rgba(182,145,79,.8);border-radius:8px;box-shadow:0 10px 30px rgba(14,20,24,.16),inset 0 1px 0 rgba(255,255,255,.9);overflow:visible}
+.nav:before{content:"";position:absolute;inset:-1px;border-radius:8px;pointer-events:none;box-shadow:0 0 0 1px rgba(17,24,29,.06)}
+.nav .logo{background:transparent;border-radius:5px;box-shadow:none;padding-inline:8px}
+.navlinks a{color:#303438;opacity:.78}.navlinks a:hover{color:#8f6b2c;opacity:1}
+.navlinks a:after{background:#b6914f;bottom:10px}
+.nav-cta{border-radius:5px;background:#b6914f;box-shadow:0 5px 14px rgba(126,94,39,.2)}.nav-cta:hover{background:#9d7736}
+.menu{color:#25292c;border-color:#25292c33;border-radius:5px}
+@media(max-width:900px){.navlinks{background:rgba(246,246,243,.98);color:#25292c;border:1px solid #d4d1c9;border-top:2px solid #b6914f;border-radius:0 0 8px 8px;box-shadow:0 15px 30px #0002}.navlinks a{color:#25292c}.menu{color:#25292c}}
