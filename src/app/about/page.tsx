@@ -1,6 +1,22 @@
 ﻿import Link from "next/link";
 import { ArrowRight, Building2, Globe2, Handshake, Scale } from "lucide-react";
 import styles from "./about.module.css";
+import {
+
+  Landmark,
+  Users,
+  CalendarDays,
+  Quote,
+  Crown,
+  Award,
+  MapPinned,
+  BriefcaseBusiness,
+  ShieldCheck,
+  Network,
+  Target,
+  Sparkles,
+  ChevronRight,
+} from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -30,71 +46,125 @@ export default function AboutPage() {
       </header>
 
       <section className={styles.hero}>
-        <div className={styles.grid} />
-        <div className={styles.heroInner}>
-          <p className={styles.overline}>
-            <span /> About EBG · 01
-          </p>
-          <h1>
-            Business bridges.
-            <br />
-            <em>Built to endure.</em>
-          </h1>
-          <div className={styles.heroBottom}>
-            <p>
-              EBG Federation is the definitive advocacy platform for European
-              business in India—bringing leaders together, informing policy and
-              strengthening one of the world&apos;s most consequential economic
-              relationships.
-            </p>
-            <div>
-              <strong>1997</strong>
-              <span>
-                Established
-                <br />
-                in India
-              </span>
-            </div>
-            <div>
-              <strong>400+</strong>
-              <span>
-                Business
-                <br />
-                leaders
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className={styles.heroOverlay}></div>
 
+  <div className={styles.heroContent}>
+    <p className={styles.overline}>ABOUT EBG • 01</p>
+
+    <h1>
+      Business bridges.
+      <br />
+      <em>Built to endure.</em>
+    </h1>
+
+    <p className={styles.heroDescription}>
+      EBG Federation is the definitive advocacy platform for European business
+      in India—bringing leaders together, influencing policy and strengthening
+      one of the world's most consequential economic relationships.
+    </p>
+
+    <div className={styles.heroStats}>
+      <div className={styles.statCard}>
+        <div className={styles.statCard}>
+  <Landmark size={28} />
+  <div>
+    <strong>1997</strong>
+    <span>Established in India</span>
+  </div>
+</div>
+      </div>
+
+      <div className={styles.statDivider}></div>
+
+      <div className={styles.statCard}>
+       <div className={styles.statCard}>
+  <Users size={28} />
+  <div>
+    <strong>400+</strong>
+    <span>Business Leaders</span>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
       <section className={styles.story}>
-        <div>
-          <p className={styles.overline}>
-            <span /> Who we are
-          </p>
-          <h2>
-            A federation shaped
-            <br />
-            by <em>shared ambition.</em>
-          </h2>
-        </div>
-        <div>
-          <p>
-            EBG Federation began as the European Business Group in 1997. Today,
-            it supports and represents European, British and American companies
-            operating in India, combining local experience with an international
-            perspective.
-          </p>
-          <p>
-            Our government-recognised platform helps members navigate complex
-            markets, participate in constructive policy dialogue and build
-            relationships that turn opportunity into sustained progress.
-          </p>
-          <Link href="/membership">
-            Discover membership <ArrowRight />
-          </Link>
-        </div>
-      </section>
+  <div className={styles.storyLeft}>
+    <p className={styles.overline}>
+      <span></span>
+      Who We Are
+    </p>
+
+    <h2>
+      A federation
+      <br />
+      shaped
+      <br />
+      by <em>shared</em>
+      <br />
+      <em>ambition.</em>
+    </h2>
+
+    <div className={styles.storyLine}></div>
+
+    <div className={styles.storyQuote}>
+      <small>OUR PURPOSE</small>
+
+      <p>
+        "Connecting business, influencing policy,
+        and creating pathways to sustainable growth."
+      </p>
+
+      <Link href="/membership">
+        Discover Membership <ArrowRight size={18} />
+      </Link>
+    </div>
+  </div>
+
+  <div className={styles.storyRight}>
+    <p>
+      EBG Federation began as the European Business Group in
+      1997. Today, it supports and represents European,
+      British and American companies operating in India,
+      combining local experience with an international
+      perspective.
+    </p>
+
+    <p>
+      Our government-recognised platform helps members
+      navigate complex markets, participate in constructive
+      policy dialogue and build relationships that turn
+      opportunity into sustained progress.
+    </p>
+
+    <div className={styles.storyCards}>
+      <article>
+        <Users size={32} />
+        <h3>Represent</h3>
+        <p>
+          A strong voice for European business in India.
+        </p>
+      </article>
+
+      <article>
+        <Handshake size={32} />
+        <h3>Influence</h3>
+        <p>
+          Shaping policies that foster innovation and growth.
+        </p>
+      </article>
+
+      <article>
+        <Target size={32} />
+        <h3>Impact</h3>
+        <p>
+          Creating meaningful connections that drive progress.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
 
       <section className={styles.values}>
         <article>
@@ -168,9 +238,9 @@ export default function AboutPage() {
           <div className={styles.portrait}>
             <div className={styles.orbit} />
             <img
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=90"
-              alt="Chairman of EBG Federation"
-            />
+  src="/assets/chairman.jpg"
+  alt="Chairman of EBG Federation"
+/>
             <p>
               Leadership with perspective.
               <br />
