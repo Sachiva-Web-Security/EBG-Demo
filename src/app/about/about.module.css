@@ -160,7 +160,7 @@
 .heroContent {
   position: relative;
   z-index: 5;
-
+  padding-top: 24px;
   width: min(1200px, calc(100% - 80px));
   margin: auto;
 }

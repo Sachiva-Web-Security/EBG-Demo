@@ -1,4 +1,6 @@
 ﻿import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import styles from "./events.module.css";
 
 const events = [
@@ -14,11 +16,7 @@ const events = [
 
 export default function EventsPage(){
  return <main className={styles.page}>
-  <header className={styles.header}>
-   <Link className={styles.brand} href="/"><img src="/assets/EBG%20Logo%20-%20March%202026_edited.avif" alt="EBG Federation"/></Link>
-   <nav><Link href="/about">About</Link><Link href="/membership">Membership</Link><Link href="/sectors">Sectors</Link><Link href="/events">Events</Link><Link href="/position-papers">Position Papers</Link><Link href="/contact">Contact</Link></nav>
-   <Link className={styles.join} href="/membership">Become a Member <span>→</span></Link>
-  </header>
+  <Header />
 
   <section className={styles.hero}>
    <div className={styles.grid}/>
@@ -37,13 +35,7 @@ export default function EventsPage(){
    <div className={styles.eventList}>{events.map(([year,date,title,place,type])=><article key={title}><b>{year}</b><time>{date}</time><div><h3>{title}</h3><p>{place}</p></div><span>{type}</span><i>→</i></article>)}</div>
   </section>
 
-  <footer className={styles.footer} id="contact">
-   <div className={styles.grid}/>
-   <div className={styles.footerInner}><p className={styles.overline}>Est. 1997 · Delhi · Mumbai</p><h2>Where<br/><em>Europe</em><br/>meets <em>India.</em></h2>
-    <div className={styles.footerInfo}><div className={styles.about}><img src="/assets/EBG%20Logo%20-%20March%202026_edited.avif" alt="EBG Federation"/><p>The definitive advocacy platform representing European corporates in India. Strengthening Indo-European relations since 1997.</p><div className={styles.socials}><span>in</span><span>×</span><span>f</span><span>v</span></div></div><div><h3>Navigate</h3><Link href="/about">About</Link><Link href="/membership">Membership</Link><Link href="/sectors">Sectors</Link><Link href="/events">Events</Link><Link href="/position-papers">Papers</Link></div><div><h3>Contact</h3><p>122, Hans Bhawan<br/>(Wing 1) First floor<br/>Bahadur Shah Zafar Marg<br/>IP Estate, Delhi 110002</p><p>rhythm.sehra@ebgindia.org<br/>tania@ebgindia.org</p></div></div>
-    <div className={styles.legal}><span>© 2026 EBG Federation. All rights reserved.</span><span>Privacy &nbsp;&nbsp; Terms &nbsp;&nbsp; 28° 37′ N · 77° 14′ E</span></div>
-   </div>
-  </footer>
+  <Footer />
  </main>
 }
 

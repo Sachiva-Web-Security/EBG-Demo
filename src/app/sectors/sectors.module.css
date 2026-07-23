@@ -89,65 +89,237 @@
   height: 1px;
   background: var(--gold);
 }
-.hero {
-  height: 650px;
-  border-bottom: 1px solid #ddd8cf;
-  position: relative;
-  overflow: hidden;
+/*==========================================
+                HERO
+==========================================*/
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    height:720px;
+
+    display:flex;
+    align-items:center;
+
+    border-bottom:1px solid #e4ddd2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.99) 0%,
+            rgba(255,255,255,.97) 22%,
+            rgba(255,255,255,.90) 38%,
+            rgba(255,255,255,.55) 54%,
+            rgba(255,255,255,.12) 68%,
+            rgba(255,255,255,0) 100%
+        ),
+        url("/assets/sector.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
-.heroInner {
-  width: min(1060px, calc(100% - 48px));
-  margin: auto;
-  padding-top: 62px;
-  position: relative;
+
+.heroOverlay{
+    position:absolute;
+    inset:0;
+   
+    pointer-events:none;
+
+    background:
+        radial-gradient(circle at 28% 42%, rgba(255,255,255,.45), transparent 55%);
 }
-.hero h1 {
-  font:
-    400 clamp(64px, 7.4vw, 112px)/0.81 Georgia,
-    serif;
-  letter-spacing: -0.065em;
-  margin: 28px 0 44px;
+
+.heroInner{
+    width:min(1320px,calc(100% - 80px));
+    margin-top: 75px;
+    margin-left: 150px;
+    position:relative;
+    z-index:2;
 }
-.hero h1 em,
-.intro h2 em,
-.policy h2 em,
-.cta h2 em {
-  font-weight: 400;
-  color: var(--gold);
+
+.hero h1{
+    margin:22px 0 34px;
+
+    max-width:620px;
+
+    font-family:Georgia,serif;
+    font-size:clamp(62px,5vw,76px);
+    line-height:.92;
+    letter-spacing:-.05em;
+    font-weight:400;
+
+    color:#182240;
 }
-.heroBottom {
-  display: flex;
-  align-items: flex-end;
-  gap: 55px;
+
+.hero h1 em{
+    color:#D49A1C;
+    font-style:italic;
+    font-weight:400;
 }
-.heroBottom > p {
-  font:
-    13px/1.6 Arial,
-    sans-serif;
-  color: #666;
-  max-width: 540px;
-  margin-right: auto;
+
+.heroContent{
+    max-width:500px;
 }
-.heroBottom > div {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border-left: 1px solid #d4cfc5;
-  padding-left: 22px;
+
+.heroDescription{
+    font-size:15px;
+    line-height:1.85;
+    color:#5b6472;
+    margin-bottom:42px;
 }
-.heroBottom strong {
-  font:
-    400 35px Georgia,
-    serif;
+
+.heroStats{
+    display:flex;
+    align-items:center;
+    gap:36px;
 }
-.heroBottom span {
-  font:
-    700 8px/1.35 Arial,
-    sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #898989;
+
+.divider{
+    width:1px;
+    height:76px;
+    background:#d7d0c7;
 }
+
+.stat{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.icon{
+    width:66px;
+    height:66px;
+
+    border-radius:50%;
+    background:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#182240;
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,.08);
+}
+
+.icon svg{
+    width:28px;
+    height:28px;
+}
+
+.stat strong{
+    display:block;
+
+    font-family:Georgia,serif;
+    font-size:52px;
+    line-height:1;
+    font-weight:400;
+
+    color:#182240;
+}
+
+.stat span{
+    display:block;
+    margin-top:8px;
+
+    font-size:10px;
+    line-height:1.45;
+
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+
+    color:#66707d;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.hero{
+    height:auto;
+    padding:110px 0 90px;
+}
+
+.heroInner{
+    width:calc(100% - 48px);
+}
+
+.hero h1{
+    font-size:56px;
+}
+
+.heroStats{
+    gap:24px;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+    padding:90px 0 70px;
+}
+
+.heroInner{
+    width:calc(100% - 36px);
+}
+
+.hero h1{
+    font-size:44px;
+}
+
+.heroDescription{
+    margin-bottom:30px;
+}
+
+.heroStats{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.divider{
+    display:none;
+}
+
+.stat strong{
+    font-size:40px;
+}
+
+.icon{
+    width:58px;
+    height:58px;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero{
+    padding:80px 0 60px;
+}
+
+.hero h1{
+    font-size:36px;
+}
+
+.heroDescription{
+    font-size:14px;
+}
+
+.stat strong{
+    font-size:34px;
+}
+
+.icon{
+    width:52px;
+    height:52px;
+}
+
+}
+
 .intro {
   width: min(1060px, calc(100% - 48px));
   margin: auto;

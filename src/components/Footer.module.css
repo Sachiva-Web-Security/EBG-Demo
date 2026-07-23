@@ -1,0 +1,109 @@
+/* =========================================================
+   Shared Footer Component — matches the homepage footer
+   ========================================================= */
+
+.homeFooter {
+  background: #e7e8e9;
+  position: relative;
+  padding: 75px 0 20px;
+  overflow: hidden;
+}
+
+.homeMap {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 45%;
+  opacity: 0.13;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg")
+    center / contain no-repeat;
+}
+
+.homeGrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1.7fr;
+  gap: 50px;
+  width: min(1180px, calc(100% - 72px));
+  margin-inline: auto;
+}
+
+.homeGrid h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+}
+
+.homeGrid > div > a {
+  display: block;
+  font-size: 12px;
+  margin: 9px 0;
+  color: #56595c;
+}
+
+.homeLogo {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+}
+
+.homeLogo img {
+  display: block;
+  width: auto;
+  height: 34px;
+  object-fit: contain;
+}
+
+.homeNewsletter p {
+  font-size: 12px;
+  color: #666;
+}
+
+.homeNewsletter form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.homeNewsletter input {
+  border: 0;
+  background: #fff;
+  padding: 12px;
+  width: 100%;
+  font-size: 12px;
+}
+
+.homeNewsletter button {
+  border: 0;
+  background: var(--gold, #b6914f);
+  color: #fff;
+  padding: 0 18px;
+  font-size: 12px;
+}
+
+.homeBottom {
+  position: relative;
+  margin-top: 55px;
+  padding-top: 15px;
+  border-top: 1px solid #bbb;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #777;
+  width: min(1180px, calc(100% - 72px));
+  margin-inline: auto;
+}
+
+@media (max-width: 900px) {
+  .homeGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .homeGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 20px;
+  }
+  .homeBottom {
+    gap: 20px;
+  }
+}

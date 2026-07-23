@@ -3,13 +3,22 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   ArrowRight,
-  Building2,
+  ChevronDown,
   CircleCheck,
   Globe2,
   Handshake,
   Landmark,
+  Mail,
   Network,
+  ShieldCheck,
+  Users,
+   CalendarDays,
 } from "lucide-react";
+
+
+
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import styles from "./membership.module.css";
 
 const members = [
@@ -98,22 +107,37 @@ const benefits = [
   {
     Icon: Landmark,
     title: "Policy influence",
-    copy: "Contribute directly to practical recommendations shared with government and regulatory stakeholders.",
+    copy: "Contribute directly to pivotal conversations that shape economic and regulatory environments.",
   },
   {
     Icon: Network,
     title: "Trusted network",
-    copy: "Build relationships with senior leaders across European, British, American and Indian enterprises.",
+    copy: "Build relationships with senior leaders across Europe, the U.S. and Latin America.",
   },
   {
     Icon: Globe2,
     title: "Market intelligence",
-    copy: "Access sector-specific insight, regulatory developments and Indo-European business perspectives.",
+    copy: "Access timely market insight, regulatory developments and cross-border business opportunities.",
   },
   {
     Icon: Handshake,
     title: "Meaningful access",
-    copy: "Join curated roundtables, working sessions, delegations and flagship annual gatherings.",
+    copy: "Join member roundtables, working sessions, discussions and flagship events.",
+  },
+];
+
+const criteria = [
+  {
+    Icon: ShieldCheck,
+    copy: "Champion values of relevance, expertise and credibility in business and policy.",
+  },
+  {
+    Icon: Users,
+    copy: "Drive sustainable growth, constructive policy dialogue and collaboration.",
+  },
+  {
+    Icon: Globe2,
+    copy: "Connect leaders to opportunities that accelerate international connections and influence.",
   },
 ];
 
@@ -121,27 +145,7 @@ export default function MembershipPage() {
   const [submitted, setSubmitted] = useState(false);
   return (
     <main className={styles.page}>
-      <header className={styles.header}>
-        <Link className={styles.brand} href="/">
-          <img
-            src="/assets/EBG%20Logo%20-%20March%202026_edited.avif"
-            alt="EBG Federation"
-          />
-        </Link>
-        <nav>
-          <Link href="/about">About</Link>
-          <Link className={styles.active} href="/membership">
-            Membership
-          </Link>
-          <Link href="/sectors">Sectors</Link>
-          <Link href="/events">Events</Link>
-          <Link href="/position-papers">Position Papers</Link>
-          <Link href="/contact">Contact</Link>
-        </nav>
-        <Link className={styles.join} href="#apply">
-          Become a Member <span>→</span>
-        </Link>
-      </header>
+      <Header />
 
       <section className={styles.hero}>
         <div className={styles.grid} />
@@ -163,103 +167,117 @@ export default function MembershipPage() {
               shape India&apos;s growth story.
             </p>
             <a href="#apply">
-              Start your application <ArrowRight size={14} />
+              Start your application <ArrowRight size={16} />
             </a>
           </div>
         </div>
       </section>
 
-      <section className={styles.overview}>
-        <div>
-          <p className={styles.overline}>
-            <span /> The federation
-          </p>
-          <h2>
-            Cross-industry.
-            <br />
-            Cross-border.
-            <br />
-            <em>One voice.</em>
-          </h2>
-        </div>
-        <div className={styles.overviewCopy}>
-          <p>
-            EBG Federation represents more than 400 successful executives across
-            a wide range of industries. Through its Delhi and Mumbai chapters,
-            the network helps European, British and American companies turn
-            local knowledge, trusted contacts and collective advocacy into
-            meaningful progress.
-          </p>
-          <div className={styles.metrics}>
-            <div>
-              <strong>400+</strong>
-              <span>
-                Member
-                <br />
-                executives
-              </span>
-            </div>
-            <div>
-              <strong>17</strong>
-              <span>
-                Sector
-                <br />
-                committees
-              </span>
-            </div>
-            <div>
-              <strong>25+</strong>
-              <span>
-                Years in
-                <br />
-                India
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+<section className={styles.overview}>
+  <div className={styles.overviewContainer}>
+  {/* Decorative Elements */}
+
+  <div className={styles.leftSide}>
+    <p className={styles.overline}>
+      <span></span>
+      THE FEDERATION
+    </p>
+
+    <h2>
+      Cross-Industry.
+      <br />
+      Cross-Border.
+      <br />
+      <em>One Voice.</em>
+    </h2>
+  </div>
+
+  <div className={styles.rightSide}>
+    <div className={styles.infoCard}>
+      <p>
+        EBG Federation represents more than 400 successful executives across a
+        wide range of industries. Through its Central and National chapters,
+        the network fosters European, British and American companies with
+        cross-border innovation, market connect and collective advocacy that
+        move real progress.
+      </p>
+
+      <div className={styles.line}></div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
 
       <section className={styles.benefits}>
-        <div className={styles.benefitsHead}>
-          <p className={styles.overline}>Why EBG</p>
-          <h2>
-            Membership that
-            <br />
-            <em>moves business.</em>
-          </h2>
+  <div className={styles.benefitsHero}>
+    <div className={styles.benefitsContent}>
+      <p className={styles.overline}>Why EBG</p>
+
+      <h2>
+        Membership that
+        <br />
+        <em>moves business.</em>
+      </h2>
+
+      <div className={styles.goldLine}></div>
+
+      <p className={styles.benefitsText}>
+        EBG connects ambitious organizations to the people, insights and
+        opportunities that drive impact across borders and industries.
+      </p>
+    </div>
+  </div>
+
+  <div className={styles.benefitGrid}>
+    {benefits.map(({ Icon, title, copy }, i) => (
+      <article key={title}>
+        <div className={styles.cardTop}>
+          <i>
+            <Icon />
+          </i>
+
+          <span>0{i + 1}</span>
         </div>
-        <div className={styles.benefitGrid}>
-          {benefits.map(({ Icon, title, copy }, i) => (
-            <article key={title}>
-              <span>0{i + 1}</span>
-              <i>
-                <Icon aria-hidden="true" />
-              </i>
-              <h3>{title}</h3>
-              <p>{copy}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+
+        <div className={styles.smallLine}></div>
+
+        <h3>{title}</h3>
+        <p>{copy}</p>
+
+        <div className={styles.cardGlow}></div>
+      </article>
+    ))}
+  </div>
+
+  <div className={styles.bottomButton}>
+    <button>Become a Member →</button>
+  </div>
+</section>
+
+
 
       <section className={styles.network}>
         <div className={styles.networkHead}>
-          <div>
-            <p className={styles.overline}>
-              <span /> Our members
-            </p>
-            <h2>
-              A network built
-              <br />
-              on credibility.
-            </h2>
-          </div>
-          <p>
-            Global organisations and specialist enterprises meet here as
-            peers—connected by shared ambition and a commitment to the
-            Indo-European opportunity.
-          </p>
-        </div>
+  <div>
+    <p className={styles.overline}>
+      <span /> Our members
+    </p>
+
+    <h2>
+      <span className={styles.dark}>A NETWORK BUILT</span>
+      <br />
+      <span className={styles.gold}>ON CREDIBILITY.</span>
+    </h2>
+  </div>
+
+  <p>
+    We bring organisations and executives together across key
+    sectors, connected by common ambition and a commitment to shared
+    progress.
+  </p>
+</div>
         <div className={styles.logos}>
           {members.map((logo, i) => (
             <div key={logo} className={i % 7 === 0 ? styles.accent : ""}>
@@ -274,10 +292,11 @@ export default function MembershipPage() {
         </div>
       </section>
 
+
       <section className={styles.criteria}>
         <div className={styles.criteriaInner}>
           <p className={styles.overline}>
-            <span /> Membership criteria
+            <span /> Membership matters
           </p>
           <h2>
             Built for businesses
@@ -285,29 +304,23 @@ export default function MembershipPage() {
             with a <em>European connection.</em>
           </h2>
           <div className={styles.criteriaGrid}>
-            <div>
-              <CircleCheck />
-              <p>
-                European, British or American corporation operating or
-                establishing business in India.
-              </p>
-            </div>
-            <div>
-              <CircleCheck />
-              <p>
-                Organisation aligned with responsible growth, constructive
-                policy dialogue and collaboration.
-              </p>
-            </div>
-            <div>
-              <CircleCheck />
-              <p>
-                Senior leadership commitment to participate in the
-                federation&apos;s committees and initiatives.
-              </p>
-            </div>
-          </div>
-          <Link href="#apply">Discuss your eligibility →</Link>
+  {criteria.map(({ Icon, copy }, i) => (
+    <div key={i} className={styles.card}>
+      <div className={styles.cardTop} />
+
+      <div className={styles.iconCircle}>
+        <Icon aria-hidden="true" />
+      </div>
+
+      <div className={styles.cardDivider} />
+
+      <p>{copy}</p>
+    </div>
+  ))}
+</div>
+          <Link href="#apply">
+            Learn more or apply <ArrowRight size={16} />
+          </Link>
         </div>
       </section>
 
@@ -320,23 +333,87 @@ export default function MembershipPage() {
             <h2>
               Your seat at
               <br />
-              the table.
+              the <span className={styles.goldText}>table.</span>
             </h2>
+            <span className={styles.lead} />
             <p>
-              Tell us about your organisation and our membership team will
-              contact you to discuss the most relevant chapter and sector
-              committee.
+              Take action and a step towards real impact. We look forward to
+              welcoming you because we believe in doing business shoulder to
+              shoulder.
             </p>
             <div>
-              <Building2 />
+              <span className={styles.mailIcon}>
+                <Mail size={18} />
+              </span>
               <span>
-                Delhi Secretariat
+                Send us an email
                 <br />
-                <a href="mailto:admin@ebgindia.org">admin@ebgindia.org</a>
+                <a href="mailto:info@ebgfed.org">info@ebgfed.org</a>
               </span>
             </div>
+
+            {/* Decorative dotted globe */}
+            <svg
+              className={styles.worldMap}
+              viewBox="0 0 600 420"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <defs>
+                <pattern
+                  id="applyDotGrid"
+                  width="11"
+                  height="11"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <circle cx="1.3" cy="1.3" r="1.3" fill="rgba(255,255,255,0.16)" />
+                </pattern>
+                <clipPath id="applyGlobeClip">
+                  <circle cx="130" cy="360" r="250" />
+                </clipPath>
+                <radialGradient id="applyGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="var(--gold)" stopOpacity="0.9" />
+                  <stop offset="100%" stopColor="var(--gold)" stopOpacity="0" />
+                </radialGradient>
+              </defs>
+              <g clipPath="url(#applyGlobeClip)">
+                <rect x="-60" y="110" width="660" height="340" fill="url(#applyDotGrid)" />
+              </g>
+              <path
+                d="M175 265 C 260 215, 350 190, 445 130"
+                stroke="var(--gold)"
+                strokeOpacity="0.45"
+                strokeWidth="1"
+                fill="none"
+              />
+              <path
+                d="M175 265 C 225 245, 265 225, 305 218"
+                stroke="var(--gold)"
+                strokeOpacity="0.45"
+                strokeWidth="1"
+                fill="none"
+              />
+              <path
+                d="M175 265 C 148 205, 128 150, 112 95"
+                stroke="var(--gold)"
+                strokeOpacity="0.3"
+                strokeWidth="1"
+                fill="none"
+              />
+              <circle cx="175" cy="265" r="24" fill="url(#applyGlow)" />
+              <circle cx="175" cy="265" r="4" fill="var(--gold)" />
+              <circle cx="445" cy="130" r="3.5" fill="var(--gold)" />
+              <circle cx="305" cy="218" r="3.5" fill="var(--gold)" />
+              <circle cx="112" cy="95" r="3.5" fill="var(--gold)" />
+              <circle cx="390" cy="345" r="3" fill="var(--gold)" />
+            </svg>
           </aside>
+
           <div className={styles.formCard}>
+            <span className={styles.avatar}>
+              <Users size={20} />
+            </span>
+
             {submitted ? (
               <div className={styles.success}>
                 <CircleCheck />
@@ -359,21 +436,17 @@ export default function MembershipPage() {
               >
                 <div className={styles.row}>
                   <label>
-                    First name
+                    First name<span className={styles.req} />
                     <input required placeholder="First name" />
                   </label>
                   <label>
-                    Last name
-                    <input required placeholder="Last name" />
+                    Company name<span className={styles.req} />
+                    <input required placeholder="Company" />
                   </label>
                 </div>
-                <label>
-                  Company name
-                  <input required placeholder="Organisation" />
-                </label>
                 <div className={styles.row}>
                   <label>
-                    Work email
+                    Work email<span className={styles.req} />
                     <input
                       required
                       type="email"
@@ -381,54 +454,65 @@ export default function MembershipPage() {
                     />
                   </label>
                   <label>
-                    Phone number
+                    Phone number<span className={styles.req} />
                     <input required type="tel" placeholder="+91" />
                   </label>
                 </div>
                 <label>
-                  Address in India
+                  Address in India<span className={styles.req} />
                   <input required placeholder="City and registered address" />
                 </label>
                 <div className={styles.row}>
                   <label>
-                    Main sector
-                    <select required defaultValue="">
-                      <option value="" disabled>
-                        Select sector
-                      </option>
-                      <option>Automotive</option>
-                      <option>Banking & Finance</option>
-                      <option>Digital Transformation</option>
-                      <option>Healthcare</option>
-                      <option>Manufacturing</option>
-                      <option>Other</option>
-                    </select>
+                    I&apos;m looking for<span className={styles.req} />
+                    <span className={styles.selectWrap}>
+                      <select required defaultValue="">
+                        <option value="" disabled>
+                          Select sector
+                        </option>
+                        <option>Automotive</option>
+                        <option>Banking & Finance</option>
+                        <option>Digital Transformation</option>
+                        <option>Healthcare</option>
+                        <option>Manufacturing</option>
+                        <option>Other</option>
+                      </select>
+                      <ChevronDown size={16} className={styles.chevron} />
+                    </span>
                   </label>
                   <label>
-                    Preferred chapter
-                    <select required defaultValue="">
-                      <option value="" disabled>
-                        Select chapter
-                      </option>
-                      <option>Delhi</option>
-                      <option>Mumbai</option>
-                    </select>
+                    Preferred chapter<span className={styles.req} />
+                    <span className={styles.selectWrap}>
+                      <select required defaultValue="">
+                        <option value="" disabled>
+                          Select chapter
+                        </option>
+                        <option>Delhi</option>
+                        <option>Mumbai</option>
+                      </select>
+                      <ChevronDown size={16} className={styles.chevron} />
+                    </span>
                   </label>
                 </div>
                 <label>
-                  Tell us about your organisation
+                  Tell us about your organisation<span className={styles.req} />
                   <textarea
                     rows={4}
                     placeholder="Business activity and membership interest"
                   />
                 </label>
                 <div className={styles.formEnd}>
-                  <p>
-                    By submitting, you agree to be contacted regarding EBG
-                    membership.
-                  </p>
+                  <div className={styles.consent}>
+                    <span className={styles.shieldWrap}>
+                      <ShieldCheck size={18} />
+                    </span>
+                    <p>
+                      By submitting, you agree to be contacted regarding EBG
+                      membership.
+                    </p>
+                  </div>
                   <button>
-                    Submit application <ArrowRight size={14} />
+                    Submit application <ArrowRight size={16} />
                   </button>
                 </div>
               </form>
@@ -437,21 +521,7 @@ export default function MembershipPage() {
         </div>
       </section>
 
-      <footer className={styles.footer}>
-        <Link href="/">
-          <img
-            src="/assets/EBG%20Logo%20-%20March%202026_edited.avif"
-            alt="EBG Federation"
-          />
-        </Link>
-        <p>© 2026 EBG Federation. All rights reserved.</p>
-        <div>
-          <Link href="/sectors">Sectors</Link>
-          <Link href="/events">Events</Link>
-          <Link href="/contact">Contact</Link>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
-

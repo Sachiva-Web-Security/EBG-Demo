@@ -9,6 +9,8 @@ import {
   Globe2,
   Scale,
 } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import styles from "./position-papers.module.css";
 
 const papers = [
@@ -74,27 +76,7 @@ export default function PositionPapersPage() {
     filter === "All" ? papers : papers.filter((p) => Number(p.year) >= 2024);
   return (
     <main className={styles.page}>
-      <header className={styles.header}>
-        <Link className={styles.brand} href="/">
-          <img
-            src="/assets/EBG%20Logo%20-%20March%202026_edited.avif"
-            alt="EBG Federation"
-          />
-        </Link>
-        <nav>
-          <Link href="/about">About</Link>
-          <Link href="/membership">Membership</Link>
-          <Link href="/sectors">Sectors</Link>
-          <Link href="/events">Events</Link>
-          <Link className={styles.active} href="/position-papers">
-            Position Papers
-          </Link>
-          <Link href="/contact">Contact</Link>
-        </nav>
-        <Link className={styles.join} href="/membership">
-          Become a Member <span>→</span>
-        </Link>
-      </header>
+      <Header />
       <section className={styles.hero}>
         <div className={styles.grid} />
         <div className={styles.heroInner}>
@@ -326,20 +308,7 @@ export default function PositionPapersPage() {
           </div>
         </div>
       </section>
-      <footer className={styles.footer}>
-        <Link href="/">
-          <img
-            src="/assets/EBG%20Logo%20-%20March%202026_edited.avif"
-            alt="EBG Federation"
-          />
-        </Link>
-        <p>© 2026 EBG Federation. All rights reserved.</p>
-        <div>
-          <Link href="/sectors">Sectors</Link>
-          <Link href="/events">Events</Link>
-          <Link href="/contact">Contact</Link>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

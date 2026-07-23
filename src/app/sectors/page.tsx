@@ -1,4 +1,5 @@
 ﻿import Link from "next/link";
+import { Users, FileText } from "lucide-react";
 import {
   Sprout,
   Wine,
@@ -18,6 +19,8 @@ import {
   TrainFront,
   ShoppingBag,
 } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import styles from "./sectors.module.css";
 
 const sectors = [
@@ -128,66 +131,68 @@ const sectors = [
 export default function SectorsPage() {
   return (
     <main className={styles.page}>
-      <header className={styles.header}>
-        <Link className={styles.brand} href="/">
-          <img
-            src="/assets/EBG%20Logo%20-%20March%202026_edited.avif"
-            alt="EBG Federation"
-          />
-        </Link>
-        <nav>
-          <Link href="/about">About</Link>
-          <Link href="/membership">Membership</Link>
-          <Link className={styles.active} href="/sectors">
-            Sectors
-          </Link>
-          <Link href="/events">Events</Link>
-          <Link href="/position-papers">Position Papers</Link>
-          <Link href="/contact">Contact</Link>
-        </nav>
-        <Link className={styles.join} href="/#impact">
-          Become a Member <span>→</span>
-        </Link>
-      </header>
+      <Header />
 
-      <section className={styles.hero}>
-        <div className={styles.grid} />
-        <div className={styles.heroInner}>
-          <p className={styles.overline}>
-            <span /> Sectors · 03
-          </p>
-          <h1>
-            Expertise that
-            <br />
-            moves <em>industries</em>
-            <br />
-            forward.
-          </h1>
-          <div className={styles.heroBottom}>
-            <p>
-              Our Sector Committees unite industry leaders around common
-              challenges, shape practical policy recommendations and contribute
-              to EBG&apos;s annual Position Paper.
-            </p>
-            <div>
-              <strong>17</strong>
-              <span>
-                Sector
-                <br />
-                committees
-              </span>
-            </div>
-            <div>
-              <strong>23</strong>
-              <span>
-                Annual position
-                <br />
-                papers
-              </span>
-            </div>
+<section className={styles.hero}>
+  <div className={styles.heroOverlay} />
+
+  <div className={styles.heroInner}>
+    <p className={styles.overline}>
+      <span /> Sectors · 03
+    </p>
+
+    <h1>
+      Expertise that
+      <br />
+      moves <em>industries</em>
+      <br />
+      forward.
+    </h1>
+
+    <div className={styles.heroContent}>
+      <p className={styles.heroDescription}>
+        Our Sector Committees unite industry leaders around common
+        challenges, shape practical policy recommendations and contribute
+        to EBG&apos;s annual Position Paper.
+      </p>
+
+      <div className={styles.heroStats}>
+        <div className={styles.stat}>
+          <div className={styles.icon}>
+            <Users size={26} strokeWidth={2} />
+          </div>
+
+          <div>
+            <strong>17</strong>
+            <span>
+              Sector
+              <br />
+              Committees
+            </span>
           </div>
         </div>
-      </section>
+
+        <div className={styles.divider} />
+
+        <div className={styles.stat}>
+          <div className={styles.icon}>
+            <FileText size={26} strokeWidth={2} />
+          </div>
+
+          <div>
+            <strong>23</strong>
+            <span>
+              Annual Position
+              <br />
+              Papers
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section className={styles.intro}>
         <div>
@@ -284,20 +289,7 @@ export default function SectorsPage() {
         </div>
       </section>
 
-      <footer className={styles.footer}>
-        <Link href="/">
-          <img
-            src="/assets/EBG%20Logo%20-%20March%202026_edited.avif"
-            alt="EBG Federation"
-          />
-        </Link>
-        <p>© 2026 EBG Federation. All rights reserved.</p>
-        <div>
-          <Link href="/events">Events</Link>
-          <Link href="/position-papers">Position Papers</Link>
-          <Link href="/contact">Contact</Link>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

@@ -1,5 +1,7 @@
 ﻿"use client";
 import { useState } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 const sectors = [
   "Europe",
   "Economy",
@@ -53,38 +55,12 @@ const Arrow = ({ left = false }: { left?: boolean }) => (
   <span>{left ? "←" : "→"}</span>
 );
 export default function Home() {
-  const [menu, setMenu] = useState(false),
-    [sector, setSector] = useState(0),
+  const [sector, setSector] = useState(0),
     [video, setVideo] = useState(0);
   return (
     <main>
+      <Header homeHref="#home" />
       <section className="hero" id="home">
-        <nav className="nav wrap">
-          <a className="logo" href="#home">
-            <img
-              src="/assets/EBG%20Logo%20-%20March%202026_edited.avif"
-              alt="EBG Federation"
-            />
-          </a>
-          <div className={"navlinks " + (menu ? "open" : "")}>
-            <a href="/about">About</a>
-            <a href="/membership">Membership</a>
-            <a href="/sectors">Collaboration</a>
-            <a href="/position-papers">Publications</a>
-            <a href="/events">Events</a>
-            <a href="#media">Media</a>
-          </div>
-          <a className="nav-cta" href="#impact">
-            Become a member <span>→</span>
-          </a>
-          <button
-            className="menu"
-            aria-label="Toggle navigation"
-            onClick={() => setMenu(!menu)}
-          >
-            {menu ? "×" : "☰"}
-          </button>
-        </nav>
         <video
           key={video}
           className="hero-video"
@@ -287,43 +263,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <footer>
-        <div className="footer-map" />
-        <div className="wrap footer-grid">
-          <a className="logo" href="#home">
-            <img
-              src="/assets/EBG%20Logo%20-%20March%202026_edited.avif"
-              alt="EBG Federation"
-            />
-          </a>
-          <div>
-            <h3>Quick Links</h3>
-            <a href="#home">Home</a>
-            <a href="/about">About</a>
-            <a href="/events">Events</a>
-            <a href="/position-papers">Publications</a>
-          </div>
-          <div>
-            <h3>Resource Links</h3>
-            <a href="/sectors">Sector Committees</a>
-            <a href="/membership">Membership</a>
-            <a href="#media">Media</a>
-            <a href="/contact">Contact Us</a>
-          </div>
-          <div className="newsletter">
-            <h3>Newsletter Signup</h3>
-            <p>Stay in the loop with our events and newsletters.</p>
-            <form onSubmit={(e) => e.preventDefault()}>
-              <input type="email" placeholder="Email address" />
-              <button>Sign up</button>
-            </form>
-          </div>
-        </div>
-        <div className="footer-bottom wrap">
-          <span>© 2026 EBG Federation</span>
-          <span>Europe • India • Business</span>
-        </div>
-      </footer>
+      <Footer homeHref="#home" />
     </main>
   );
 }

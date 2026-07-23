@@ -1,0 +1,329 @@
+/* =========================================================
+   Shared Header Component — premium transparent → glass
+   Color theme: white, cream, gold, dark navy
+   ========================================================= */
+
+/* ---------- Shell ---------- */
+.shell {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  pointer-events: none; /* allow clicks to pass to hero behind it; children re-enable */
+}
+
+/* The actual bar lives inside a width-constrained wrapper */
+.bar {
+  pointer-events: auto;
+  width: min(1280px, calc(100% - 32px));
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 78px;
+  padding: 0 22px;
+
+  /* Transparent state (over hero) */
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-radius: 16px;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+
+  transition:
+    background-color 350ms ease,
+    backdrop-filter 350ms ease,
+    -webkit-backdrop-filter 350ms ease,
+    border-color 350ms ease,
+    box-shadow 350ms ease,
+    color 350ms ease,
+    transform 350ms ease;
+}
+
+/* Scrolled state — glass + gold underline */
+.barScrolled {
+  margin-top: 12px;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  border: 1px solid rgba(8, 28, 58, 0.08);
+  border-bottom: 1px solid rgba(216, 164, 55, 0.55);
+  border-radius: 14px;
+  box-shadow:
+    0 10px 30px rgba(8, 28, 58, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.6) inset;
+}
+
+/* ---------- Logo ---------- */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 300ms ease;
+}
+
+.logo:hover {
+  transform: translateY(-1px);
+}
+
+.logo img {
+  display: block;
+  width: auto;
+  height: 84px;
+  object-fit: contain;
+  transition: transform 300ms ease;
+}
+
+.logo:hover img {
+  transform: scale(1.04);
+}
+
+/* ---------- Nav links ---------- */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  margin-left: auto;
+  margin-right: 12px;
+}
+
+.nav a {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #081c3a; /* navy/black for contrast over hero */
+  opacity: 0.88;
+  padding: 10px 2px;
+  transition: color 300ms ease, opacity 300ms ease;
+}
+
+/* When scrolled, links stay navy */
+.barScrolled .nav a {
+  color: #081c3a;
+  opacity: 0.8;
+}
+
+/* Animated gold underline */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #d8a437, #f0c874);
+  transition: left 300ms ease, right 300ms ease, opacity 300ms ease;
+  opacity: 0;
+}
+
+.nav a:hover {
+  opacity: 1;
+  color: #b6914f; /* gold on hover */
+}
+
+.barScrolled .nav a:hover {
+  color: #b6914f;
+}
+
+.nav a:hover::after {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+/* ---------- CTA ---------- */
+.cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 44px;
+  padding: 0 22px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0a1b39;
+  background: linear-gradient(135deg, #f0c874 0%, #d8a437 55%, #b6914f 100%);
+  
+  white-space: nowrap;
+  overflow: hidden;
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease,
+    color 300ms ease;
+}
+
+/* Subtle shimmer */
+.cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 100%
+  );
+  transition: left 600ms ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 1px rgba(216, 164, 55, 0.55),
+    0 16px 30px rgba(216, 164, 55, 0.45),
+    0 0 30px rgba(216, 164, 55, 0.45);
+  color: #081c3a;
+}
+
+.cta:hover::before {
+  left: 120%;
+}
+
+.cta span {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ---------- Mobile toggle ---------- */
+.menu {
+  display: none;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.92);
+  color: #081c3a;
+  border: 1px solid rgba(8, 28, 58, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(8, 28, 58, 0.1);
+  font-size: 18px;
+  transition: background-color 300ms ease, transform 300ms ease;
+}
+
+.menu:hover {
+  transform: translateY(-1px);
+}
+
+/* Mobile dropdown panel — picks up glass theme when open */
+.menuPanel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  padding: 18px;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  border: 1px solid rgba(8, 28, 58, 0.08);
+  border-top: 2px solid #d8a437;
+  border-radius: 14px;
+  box-shadow: 0 16px 30px rgba(8, 28, 58, 0.16);
+}
+
+.menuPanelOpen {
+  display: flex;
+}
+
+.menuPanel a {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #081c3a;
+  padding: 12px 8px;
+  border-bottom: 1px solid rgba(8, 28, 58, 0.06);
+  opacity: 0.82;
+  transition: color 300ms ease, opacity 300ms ease;
+}
+
+.menuPanel a:last-child {
+  border-bottom: 0;
+}
+
+.menuPanel a:hover {
+  opacity: 1;
+  color: #b6914f;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 980px) {
+  .bar {
+    margin-top: 12px;
+    height: 64px;
+    padding: 0 14px;
+    gap: 12px;
+  }
+  .barScrolled {
+    margin-top: 8px;
+    height: 60px;
+  }
+  .nav {
+    display: none;
+  }
+  .menu {
+    display: inline-flex;
+  }
+  .logo img {
+    height: 30px;
+  }
+  .cta {
+    height: 40px;
+    padding: 0 16px;
+    font-size: 12px;
+  }
+  .cta span {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .bar {
+    margin-top: 8px;
+    width: calc(100% - 16px);
+    height: 60px;
+    padding: 0 10px;
+  }
+  .barScrolled {
+    height: 56px;
+  }
+  .logo {
+    padding: 6px 10px;
+  }
+  .logo img {
+    height: 26px;
+  }
+  .cta {
+    width: 40px;
+    padding: 0;
+    justify-content: center;
+  }
+  .cta {
+    font-size: 0;
+  }
+}
