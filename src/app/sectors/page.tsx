@@ -1,6 +1,12 @@
 ﻿import Link from "next/link";
-import { Users, FileText } from "lucide-react";
+import Image from "next/image";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import styles from "./sectors.module.css";
+
 import {
+  Users,
+  FileText,
   Sprout,
   Wine,
   Car,
@@ -16,12 +22,12 @@ import {
   Fuel,
   Pill,
   Zap,
+  TrendingUp,
+  Lightbulb,
   TrainFront,
   ShoppingBag,
 } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import styles from "./sectors.module.css";
+
 
 const sectors = [
   {
@@ -194,24 +200,80 @@ export default function SectorsPage() {
 </section>
 
 
-      <section className={styles.intro}>
-        <div>
-          <p className={styles.overline}>
-            <span /> Collective intelligence
-          </p>
-          <h2>
-            Where shared challenges
-            <br />
-            become <em>shared progress.</em>
-          </h2>
+     <section className={styles.intro}>
+  {/* LEFT */}
+  <div className={styles.introImages}>
+    <div className={styles.mainImage}>
+      <Image
+        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&q=80"
+        alt="Office Building"
+        fill
+      />
+    </div>
+
+    <div className={styles.smallImage}>
+      <Image
+        src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80"
+        alt="Business Meeting"
+        fill
+      />
+    </div>
+
+    <div className={styles.circle}></div>
+  </div>
+
+  {/* RIGHT */}
+  <div className={styles.introContent}>
+    <p className={styles.overline}>
+      <span /> Collective intelligence
+    </p>
+
+    <h2>
+      Where shared
+      <br />
+      challenges become
+      <br />
+      <em>shared progress.</em>
+    </h2>
+
+    <p className={styles.description}>
+      Each committee brings together leaders from the same industry to
+      enhance best practices, identify regulatory priorities and build a
+      unified voice. Their work translates business experience into
+      realistic, actionable recommendations for policymakers.
+    </p>
+
+    <div className={styles.features}>
+      <div className={styles.feature}>
+        <div className={styles.icon}>
+          <Users size={22} />
         </div>
-        <p>
-          Each committee brings together leaders from the same industry to
-          exchange best practices, identify regulatory priorities and build a
-          unified voice. Their work translates business experience into
-          realistic, actionable recommendations for policymakers.
-        </p>
-      </section>
+        <span>Collaborate</span>
+      </div>
+
+      <div className={styles.feature}>
+        <div className={styles.icon}>
+          <Lightbulb size={22} />
+        </div>
+        <span>Share Insights</span>
+      </div>
+
+      <div className={styles.feature}>
+        <div className={styles.icon}>
+          <Landmark size={22} />
+        </div>
+        <span>Shape Policy</span>
+      </div>
+
+      <div className={styles.feature}>
+        <div className={styles.icon}>
+          <TrendingUp size={22} />
+        </div>
+        <span>Drive Progress</span>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section className={styles.directory}>
         <div className={styles.directoryHead}>

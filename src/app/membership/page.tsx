@@ -233,13 +233,7 @@ export default function MembershipPage() {
   <div className={styles.benefitGrid}>
     {benefits.map(({ Icon, title, copy }, i) => (
       <article key={title}>
-        <div className={styles.cardTop}>
-          <i>
-            <Icon />
-          </i>
-
-          <span>0{i + 1}</span>
-        </div>
+        
 
         <div className={styles.smallLine}></div>
 
