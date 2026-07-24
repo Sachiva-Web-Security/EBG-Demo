@@ -22,10 +22,17 @@
 
 .hero h1 em,
 .story h2 em,
-.visionCopy h2 em,
-.timelineHead h2 em,
-.cta h2 em {
+
+.timelineHead h2 em {
   color: var(--red);
+  font-style: italic;
+  font-weight: inherit;
+}
+
+
+.visionCopy h2 em,
+.cta h2 em {
+  color: #C89A1D;
   font-style: italic;
   font-weight: inherit;
 }
@@ -599,15 +606,23 @@
   align-items: center;
   position: relative;
 }
+.visionCopy .overline {
+  color: #C89A1D;
+}
+.visionCopy .overline span {
+  background: linear-gradient(90deg, #C89A1D, transparent);
+}
+
 .visionCopy h2 {
   font: 400 54px/1.0 Georgia, serif;
   letter-spacing: -0.03em;
   margin: 36px 0;
 }
+
 .visionCopy blockquote {
   font: italic 400 24px/1.5 Georgia, serif;
-  color: rgb(255, 255, 255);
-  border-left: 2px solid rgb(255, 255, 255);
+  color: #C89A1D;
+  border-left: 2px solid #C89A1D;
   margin: 0 0 34px;
   padding-left: 28px;
   max-width: 600px;
@@ -626,7 +641,7 @@
 .signature > span {
   width: 54px;
   height: 1px;
-  background: var(--gold);
+  background: #C89A1D;
 }
 .signature strong,
 .signature small {
@@ -660,7 +675,7 @@
   border-radius: 50%;
   right: -140px;
   top: -60px;
-  background: linear-gradient(135deg, #c8341df4, #b01f0fb2);
+  background: linear-gradient(135deg, #c8a91df4, rgba(176, 130, 15, 0.698));
   filter: blur(6px);
   opacity: 0.55;
 }
@@ -780,7 +795,7 @@
 }
 
 .cta .overline {
-  color:var(--gold);
+  color: #C89A1D;
   font-size: 12px;
   letter-spacing: .35em;
   margin-bottom: 22px;
@@ -799,7 +814,7 @@
 }
 
 .cta h2 em {
-  color: var(--red);
+  color: #C89A1D;
   font-style: normal;
 }
 
@@ -825,7 +840,7 @@
   padding: 16px 34px;
   border-radius: 999px;
 
-  background: linear-gradient(135deg, #B72A2A, #961f1f);
+  background: linear-gradient(135deg, #C89A1D, #b8861e);
 
   color: #fff;
   font-size: 17px;

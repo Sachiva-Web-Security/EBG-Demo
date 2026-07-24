@@ -1194,7 +1194,7 @@ Glow
 @media (max-width: 1199px) {
   .header {
     gap: 20px;
-    padding: 0 32px;
+    padding: 0 40px;
   }
   .header nav {
     display: none;
@@ -1204,8 +1204,8 @@ Glow
   }
 
   .heroInner {
-    width: calc(100% - 64px);
-    padding-left: 32px;
+    width: calc(100% - 80px);
+    padding-left: 40px;
     padding-top: 110px;
   }
 
@@ -1214,7 +1214,7 @@ Glow
   .criteriaInner,
   .applyInner,
   .footer {
-    width: calc(100% - 64px);
+    width: calc(100% - 80px);
   }
   .hero h1 {
     max-width: 600px;
@@ -1281,7 +1281,7 @@ Glow
 @media (max-width: 991px) {
   .header {
     height: 80px;
-    padding: 0 28px;
+    padding: 0 32px;
   }
 
   .hero {
@@ -1291,8 +1291,8 @@ Glow
     background-position: 68% center;
   }
   .heroInner {
-    width: calc(100% - 56px);
-    padding-left: 28px;
+    width: calc(100% - 72px);
+    padding-left: 36px;
     padding-top: 100px;
     text-align: left;
   }
@@ -1302,7 +1302,7 @@ Glow
   .criteriaInner,
   .applyInner,
   .footer {
-    width: calc(100% - 56px);
+    width: calc(100% - 72px);
   }
   .hero h1 {
     max-width: 100%;
@@ -1401,7 +1401,7 @@ Glow
 @media (max-width: 767px) {
   .header {
     height: 72px;
-    padding: 0 20px;
+    padding: 0 24px;
     gap: 12px;
   }
   .brand img {
@@ -1432,7 +1432,7 @@ Glow
     display: none;
   }
   .heroInner {
-    width: calc(100% - 48px);
+    width: calc(100% - 56px);
     padding-top: 90px;
     padding-bottom: 60px;
     padding-left: 0;
@@ -1453,7 +1453,7 @@ Glow
     padding: 70px 0;
   }
   .overviewContainer {
-    width: calc(100% - 48px);
+    width: calc(100% - 56px);
     gap: 36px;
   }
   .leftSide h2 {
@@ -1471,7 +1471,7 @@ Glow
   }
 
   .benefits {
-    padding: 70px 24px;
+    padding: 70px 28px;
   }
   .benefitsHero {
     align-items: flex-start;
@@ -1492,7 +1492,7 @@ Glow
   }
 
   .network {
-    width: calc(100% - 48px);
+    width: calc(100% - 56px);
     padding: 60px 0;
   }
   .networkHead h2 {
@@ -1515,7 +1515,7 @@ Glow
     padding: 60px 0;
   }
   .criteriaInner {
-    width: calc(100% - 48px);
+    width: calc(100% - 56px);
   }
   .criteria h2 {
     margin-bottom: 40px;
@@ -1534,7 +1534,7 @@ Glow
     padding: 60px 0;
   }
   .applyInner {
-    width: calc(100% - 48px);
+    width: calc(100% - 56px);
     gap: 44px;
   }
   .formCard {
@@ -1560,7 +1560,7 @@ Glow
   }
 
   .footer {
-    width: calc(100% - 48px);
+    width: calc(100% - 56px);
     grid-template-columns: 1fr 1fr;
   }
   .footer div {
@@ -1574,7 +1574,7 @@ Glow
 @media (max-width: 575px) {
   .header {
     height: 68px;
-    padding: 0 18px;
+    padding: 0 22px;
   }
   .brand img {
     width: 100px;
@@ -1593,7 +1593,7 @@ Glow
     min-height: 620px;
   }
   .heroInner {
-    width: calc(100% - 32px);
+    width: calc(100% - 44px);
     padding-top: 64px;
     padding-bottom: 48px;
   }
@@ -1617,7 +1617,7 @@ Glow
     padding: 56px 0;
   }
   .overviewContainer {
-    width: calc(100% - 32px);
+    width: calc(100% - 44px);
     gap: 28px;
   }
   .leftSide h2 {
@@ -1634,7 +1634,7 @@ Glow
   }
 
   .benefits {
-    padding: 56px 20px;
+    padding: 56px 22px;
   }
   .benefitsContent h2 {
     font-size: clamp(30px, 10vw, 38px);
@@ -1658,7 +1658,7 @@ Glow
   }
 
   .network {
-    width: calc(100% - 32px);
+    width: calc(100% - 44px);
     padding: 48px 0;
   }
   .networkHead h2 {
@@ -1685,7 +1685,7 @@ Glow
     padding: 48px 0;
   }
   .criteriaInner {
-    width: calc(100% - 32px);
+    width: calc(100% - 44px);
   }
   .criteria h2 {
     font-size: clamp(28px, 9vw, 36px);
@@ -1710,7 +1710,7 @@ Glow
     padding: 48px 0;
   }
   .applyInner {
-    width: calc(100% - 32px);
+    width: calc(100% - 44px);
     gap: 36px;
   }
   .apply aside h2 {
@@ -1730,7 +1730,7 @@ Glow
   }
 
   .footer {
-    width: calc(100% - 32px);
+    width: calc(100% - 44px);
     grid-template-columns: 1fr;
     justify-items: center;
     text-align: center;
